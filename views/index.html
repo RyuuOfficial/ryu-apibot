@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:image" content="https://e.top4top.io/p_2010lz9211.jpg" /> 
+
+<meta property="og:title" content="RyuuOfficial - APIs" /> <meta property="og:description" content="Made By Me RyuuOfficial "/> 
+
+<link rel="shortcut icon" href="https://e.top4top.io/p_2010lz9211.jpg" type="image/x-icon" />
+
+  <title>RyuuOfficial - Rest Api's</title>
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/ruang-admin.min.css" rel="stylesheet">
+<audio autoplay="autoplay" hidden="hidden" src="https://l.top4top.io/m_2045clld21.mp3"></audio>
+</head>
+<style>
+  .bg-orange {
+      background-color: #c3cf0f;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #ffa426), to(#dda20a));
+  background-image: linear-gradient(180deg, #dd7009 10%, #ee7708 100%);
+  background-size: cover
+}
+
+.border-right-warning {
+  border-right: .25rem solid #ffeb3b !important
+}
+
+.border-top-warning {
+  border-top: .25rem solid #ffeb3b !important
+}
+
+.animated {
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #FF0000;
+	-webkit-animation: animatedBackground_c 2s infinite alternate;
+}
+@keyframes animatedBackground_c {
+	0% {-webkit-text-stroke-color: #ff8b00}
+	10% {-webkit-text-stroke-color: #e8ff00}
+	20% {-webkit-text-stroke-color: #5dff00}
+	30% {-webkit-text-stroke-color: #00ff2e}
+	40% {-webkit-text-stroke-color: #00ffb9}
+	50% {-webkit-text-stroke-color: #00b9ff}
+	60% {-webkit-text-stroke-color: #002eff}
+	70% {-webkit-text-stroke-color: #5d00ff}
+	80% {-webkit-text-stroke-color: #e800ff}
+	90% {-webkit-text-stroke-color: #ff008b}
+	100% {-webkit-text-stroke-color: #ff0000}
+}
+
+
+.img-gg {
+  width: 165px;
+  height: 165px; 
+ border: 3px solid #e3eaef}
+  
+  h7, .h7 {
+  font-size: 0.7rem; }
+  
+  .font-gg {
+  	font-size: 40px
+  }
+
+.rainbow {
+  background: linear-gradient(
+    to right, 
+    #A6CE37, #ECE71C, #0FC6E6, #F95D44, #816271, #9F1958, #081B6A, #59D7EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 800px;
+  background-position: center 0%;
+  animation: background-slide 25s infinite linear;
+}
+
+@keyframes background-slide {
+  100% {
+    background-position: 8160px;
+  }
+}
+
+.bg-gray-dark {
+  background: #e3eaef; }
+  
+   
+
+
+
+
+.container1 {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+h11 {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+h21 {
+  margin-top: 1em;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.play-area {
+	background-color: #e3eaef;
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+}
+
+.block {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid black;
+  transition: background 0.2s ease-in-out;
+}
+
+.block:hover {
+  cursor: pointer;
+  background: #0ff30f;
+}
+
+.occupied:hover {
+  background: #ff3a3a;
+}
+
+.win {
+  background: #0ff30f;
+}
+
+.win:hover {
+  background: #0ff30f;
+}
+
+#block_0,
+#block_1,
+#block_2 {
+  border-top: none;
+}
+
+#block_0,
+#block_3,
+#block_6 {
+  border-left: none;
+}
+
+#block_6,
+#block_7,
+#block_8 {
+  border-bottom: none;
+}
+
+#block_2,
+#block_5,
+#block_8 {
+  border-right: none;
+}
+
+button1 {
+  outline: none;
+  border: 4px solid green;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 0.2s ease-in-out;
+}
+
+button1:hover {
+  cursor: pointer;
+  background: green;
+  color: white;
+}
+
+.playerWin {
+  color: blue;
+}
+
+.computerWin {
+  color: red;
+}
+
+.draw {
+  color: orangered;
+}
+
+@media only screen and (max-width: 600px) {
+
+  h11 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+  }
+
+  h21 {
+    margin-top: 1em;
+    font-size: 1.3rem;
+  }
+}
+
+</style>
+
+<body id="page-top" onload="getvisitor();">
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+        <div class="sidebar-brand-icon">
+        	<img src="https://e.top4top.io/p_2010lz9211.jpg">
+        </div>
+        <div class="sidebar-brand-text mx-3">RyuuOffice - Api</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <i class="fas fa-fire"></i>
+          <span>All Api's</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <div class="sidebar-heading">
+        API Features
+      </div>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
+          aria-expanded="true" aria-controls="collapseBootstrap">
+          <i class="fas fa-download"></i>
+          <span>Social Media</span>
+        </a>
+        <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Media Features</h6>
+            <a class="collapse-item" href="api/yutub/video?url=https://youtu.be/v0ej6EJGqos&apikey=Ryuu">YouTube Video</a>
+            <a class="collapse-item" href="api/yutub/audio?url=https://youtu.be/v0ej6EJGqos&apikey=Ryuu">YouTube Audio</a>
+            <a class="collapse-item" href="api/yutub/search?video=Ustadz Abdul Somad&apikey=Ryuu">YouTube Search</a>
+            <a class="collapse-item" href="api/fbdown/?url=MASUKIN_URL&apikey=Ryuu">Facebook</a>
+            <a class="collapse-item" href="api/tiktod/?url=MASUKIN_URL&apikey=Ryuu">Tiktok</a>
+            <h6 class="collapse-header">Stalker Features</h6>
+            <a class="collapse-item" href="api/tiktod/stalk/?username=MASUKIN_USERNAME&apikey=Ryuu">Tiktok Stalk</a>
+            <a class="collapse-item" href="api/ig/stalk?username=zeeoneofc&apikey=Ryuu">Instagram Stalk</a>
+            <a class="collapse-item" href="api/github/stalk?username=zeeoneofc&apikey=Ryuu">Github Stalk</a>
+            <a class="collapse-item" href="api/repository/stalk?username=api-zeeoneofc&apikey=Ryuu">Repository Stalk</a>
+            </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseIslamic" aria-expanded="true"
+          aria-controls="collapseIslamic">
+          <i class="fas fa-star-and-crescent"></i>
+          <span>Islamic</span>
+        </a>
+        <div id="collapseIslamic" class="collapse" aria-labelledby="headingIslamic" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Islamic Features</h6>
+            <a class="collapse-item" href="api/hadits?kitab=bukhari&nomor=52&apikey=Ryuu">Hadits Shahih</a>
+            <a class="collapse-item" href="api/quran?surah=1&ayat=2&apikey=Ryuu">Al Qur'an</a>
+            <a class="collapse-item" href="api/muslim/tahlil?apikey=Ryuu">Doa Tahlil</a>
+            <a class="collapse-item" href="api/muslim/wirid?apikey=Ryuu">Doa Wirid</a>
+            <a class="collapse-item" href="api/muslim/asmaulhusna?apikey=Ryuu">Asmaul Husna</a>
+            <a class="collapse-item" href="api/muslim/doaharian?apikey=Ryuu">Doa Harian</a>
+            <a class="collapse-item" href="api/muslim/ayatkursi?apikey=Ryuu">Ayat Kursi</a>
+            <a class="collapse-item" href="api/kisahnabi?nabi=muhammad&apikey=Ryuu">Kisah Nabi</a>
+            <a class="collapse-item" href="api/muslim/niatshalat?apikey=Ryuu">Niat Shalat</a>
+            <a class="collapse-item" href="api/muslim/bacaanshalat?apikey=Ryuu">Bacaan Shalat</a>
+           <!-- <a class="collapse-item" href="api/jadwalshalat?kota=jakartautara&apikey=Ryuu">Jadwal Shalat</a> -->
+          </div>
+        </div>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKodepos" aria-expanded="true"
+          aria-controls="collapseKodepos">
+          <i class="fas fa-images"></i>
+          <span>Images</span>
+        </a>
+        <div id="collapseKodepos" class="collapse" aria-labelledby="headingKodepos" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Images Features</h6>
+            <a class="collapse-item" href="api/wallpaper/teknologi?apikey=Ryuu">Wallpaper Teknologi</a>
+            <a class="collapse-item" href="api/wallpaper/programming?apikey=Ryuu">Wallpaper Programming</a>
+            <a class="collapse-item" href="api/wallpaper/cyberspace?apikey=Ryuu">Wallpaper CyberSpace</a>
+            <a class="collapse-item" href="api/wallpaper/muslim?apikey=Ryuu">Wallpaper Muslim</a>
+            <a class="collapse-item" href="api/wallpaper/pegunungan?apikey=Ryuu">Wallpaper Mountain View</a>
+            </div>
+            </div>
+            </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGithub"
+          aria-expanded="true" aria-controls="collapseGithub">
+          <i class="fas fa-random"></i>
+          <span>Random</span>
+        </a>
+        <div id="collapseGithub" class="collapse" aria-labelledby="headingGithub" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Random Features</h6>
+            <a class="collapse-item" href="api/randomquote?apikey=Ryuu">Quotes</a>
+            <a class="collapse-item" href="api/randomquote/muslim?apikey=Ryuu">Quotes Islami</a>
+            <a class="collapse-item" href="api/quotes/kanye?apikey=Ryuu">Quotes Kanye</a>
+            <a class="collapse-item" href="api/random/asmaulhusna?apikey=Ryuu">Asmaul Husna</a>
+            <a class="collapse-item" href="api/random/meme?apikey=Ryuu">Meme</a>
+            <a class="collapse-item" href="api/random/wallpaper?apikey=Ryuu">Wallpaper</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaker"
+          aria-expanded="true" aria-controls="collapseMaker">
+          <i class="fas fa-images"></i>
+          <span>Text Maker 2D</span>
+        </a>
+        <div id="collapseMaker" class="collapse" aria-labelledby="headingMaker" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">TextMaker2D Features</h6>
+            <a class="collapse-item" href="api/maker?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 1</a>
+            <a class="collapse-item" href="api/maker2?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 2</a>
+            <a class="collapse-item" href="api/maker3?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 3</a>
+            <a class="collapse-item" href="api/maker4?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 4</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMaker3D"
+          aria-expanded="true" aria-controls="collapseMaker3D">
+          <i class="fas fa-images"></i>
+          <span>Text Maker 3D</span>
+        </a>
+        <div id="collapseMaker3D" class="collapse" aria-labelledby="headingMaker3D" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">TextMaker3D Features</h6>
+            <a class="collapse-item" href="api/maker3d?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 1</a>
+            <a class="collapse-item" href="api/maker3d/no2?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 2</a>
+            <a class="collapse-item" href="api/maker3d/no3?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 3</a>
+            <a class="collapse-item" href="api/maker3d/no4?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 4</a>
+            <a class="collapse-item" href="api/maker3d/no5?text=Ya Allah Kabulkan DoaKu&apikey=Ryuu">Maker 5</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMakerOther"
+          aria-expanded="true" aria-controls="collapseMakerOther">
+          <i class="fas fa-images"></i>
+          <span>Text Maker Others</span>
+        </a>
+        <div id="collapseMakerOther" class="collapse" aria-labelledby="headingMakerOther" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">TextMaker Others Features</h6>
+            <a class="collapse-item" href="api/maker/special/transformer?text=Transformer&apikey=Ryuu">Transformer</a>
+            <a class="collapse-item" href="api/maker/special/epep?text=Ryuu&apikey=Ryuu">Sertifikat Epep</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseText" aria-expanded="true"
+          aria-controls="collapseText">
+          <i class="fas fa-images"></i>
+          <span>Photooxy</span>
+        </a>
+        <div id="collapseText" class="collapse" aria-labelledby="headingText" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Photooxy Features</h6>
+            <a class="collapse-item" href="api/textmaker?text=halo&text2=hai&theme=glitch&apikey=Ryuu">Glitch</a>
+            <a class="collapse-item" href="api/textmaker?text=halo&text2=hai&text3=gwganteng&theme=google-suggestion&apikey=Ryuu">Google Suggestion</a>
+            <a class="collapse-item" href="api/textmaker/game?text=halo&text2=hai&theme=pubg&apikey=Ryuu">PUBG</a>
+            <a class="collapse-item" href="api/textmaker/game?text=halo&text2=hai&theme=battlefield&apikey=Ryuu">BattleField</a>
+            <a class="collapse-item" href="api/textmaker/senja?text=Ryuu&theme=coffee-cup&apikey=Ryuu">Coffee Cup</a>
+            <a class="collapse-item" href="api/textmaker/senja?text=Ryuu&theme=coffee-cup2&apikey=Ryuu">Coffee Cup 2</a>
+            <a class="collapse-item" href="api/textmaker/metallic?text=Ryuu&theme=neon&apikey=Ryuu">Neon</a>
+            <a class="collapse-item" href="api/textmaker/metallic?text=Ryuu&theme=glow&apikey=Ryuu">Glow</a>
+            <a class="collapse-item" href="api/textmaker/alam?text=Ryuu&theme=summer&apikey=Ryuu">Summer</a>
+            <a class="collapse-item" href="api/textmaker/alam?text=Ryuu&theme=flower&apikey=Ryuu">Flower</a>
+            <a class="collapse-item" href="api/textmaker/random?text=Ryuu&theme=text-burn&apikey=Ryuu">Text Burn</a>
+            <a class="collapse-item" href="api/textmaker/random?text=Ryuu&theme=art-quote&apikey=Ryuu">Art Quote</a>
+            <a class="collapse-item" href="api/textmaker/roses?text=Ryuu&theme=wooden-boarch&apikey=Ryuu">Wooden Boarch</a>
+            <a class="collapse-item" href="api/textmaker/roses?text=Ryuu&theme=golden&apikey=Ryuu">Golden Roses</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnime" aria-expanded="true"
+          aria-controls="collapseAnime">
+          <i class="fas fa-tv"></i>
+          <span>Anime</span>
+        </a>
+        <div id="collapseAnime" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Anime/Manga Features</h6>
+            <a class="collapse-item" href="api/anime/kusonime?search=planetarian&apikey=Ryuu">Kusonime</a>
+            <a class="collapse-item" href="api/manga?search=kimetsu no yaiba&apikey=Ryuu">Manga</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnime3" aria-expanded="true"
+          aria-controls="collapseAnime3">
+          <i class="fas fa-mug-hot"></i>
+          <span>Asupan Timeline</span>
+        </a>
+        <div id="collapseAnime3" class="collapse" aria-labelledby="headingAnime" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Asupan Timeline Features</h6>
+            <a class="collapse-item" href="api/asupan/tiktok?apikey=Ryuu">Tiktok Random Video</a>
+            <a class="collapse-item" href="api/asupan?apikey=Ryuu">Asupan</a>
+	
